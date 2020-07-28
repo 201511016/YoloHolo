@@ -1,0 +1,29 @@
+1.Icons 
+#메인화면 SC001
+-CREATE butt 
+-PLAY butt
+-EDIT butt
+-SETTINGS butt
+
+#CREATE화면 SC002
+-BACK butt 
+-FORWARD butt
+-SAVING butt
+
+#EDIT화면 SC003
+-BACK butt(*)
+-CROP butt
+-DELBGD 	butt 
+-BLRBGD butt
+-SAVING butt(*)
+-CHECK butt
+
+#PLAY화면 SC004
+-BACK butt(*)
+-FORWARD butt(*)
+
+#SETTINGS화면 SC005
+-BACK butt(*)
+-
+
+2.Logo
