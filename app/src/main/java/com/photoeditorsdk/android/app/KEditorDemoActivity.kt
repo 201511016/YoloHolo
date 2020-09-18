@@ -1,5 +1,6 @@
 package com.photoeditorsdk.android.app
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
@@ -8,6 +9,7 @@ import android.os.Environment
 import android.provider.MediaStore
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.Toast
 import ly.img.android.pesdk.PhotoEditorSettingsList
 import ly.img.android.pesdk.assets.filter.basic.FilterPackBasic
@@ -80,11 +82,12 @@ class KEditorDemoActivity : Activity(), PermissionRequest.Response {
             it.savePolicy = SaveSettings.SavePolicy.RETURN_ALWAYS_ONLY_OUTPUT
         }
 
+    @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val openGallery = findViewById<Button>(R.id.openGallery)
+        val openGallery = findViewById<ImageButton>(R.id.edit_btn)
 
         openGallery.setOnClickListener {
             openSystemGalleryToSelectAnImage()

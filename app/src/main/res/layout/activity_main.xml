@@ -1,17 +1,3 @@
-<!--
-  ~ This file is part of the PhotoEditor Software Development Kit.
-  ~
-  ~ Copyright (C) 2016 9elements GmbH <contact@9elements.com>
-  ~ All rights reserved.
-  ~
-  ~ Redistribution and use in sourceType and binary forms, without
-  ~ modification, are permitted provided that the following license agreement
-  ~ is approved and a legal/financial contract was signed by the user.
-  ~
-  ~ The license agreement can be found under the following link:
-  ~
-  ~ https://www.photoeditorsdk.com/LICENSE.txt
-  -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
@@ -25,46 +11,125 @@
               android:background="#FFFFFF"
               android:layout_alignParentTop="true">
 
-    <ly.img.android.pesdk.ui.widgets.ImageSourceView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:src="@drawable/imgly_logo_launcher"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/openGallery"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_margin="8dp"
-        android:textSize="12sp"
-        android:text="TAKE FROM GALLERY"
-        android:textColor="#4C4C4C"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/button_launcher_background"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.85"
+            android:background="#ffffff">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="50dp"
+                android:src="@drawable/logo" />
 
-    <TextView
-        android:id="@+id/infoText"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text=""/>
+        </LinearLayout>
 
-    <Space
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.85"
+            android:orientation="horizontal"
+            android:background="#ffffff">
 
-    <TextView
-        android:id="@+id/showVersion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="left|start"
-        android:text="@string/pesdk_version"
-        android:textSize="12sp"
-        android:textColor="#4C4C4C" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/create_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
+                        android:maxWidth="100dp"
+                        android:maxHeight="100dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/create_btn"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                    <ImageButton
+                        android:id="@+id/edit_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="100dp"
+                        android:maxHeight="100dp"
+                        android:scaleType="fitCenter"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/edit_btn"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="#ffffff">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                    <ImageButton
+                        android:id="@+id/play_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="100dp"
+                        android:maxHeight="100dp"
+                        android:scaleType="fitCenter"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/play_btn"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                    <ImageButton
+                        android:id="@+id/settings_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="100dp"
+                        android:maxHeight="100dp"
+                        android:scaleType="fitCenter"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/settings_btn"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:background="#ffffff">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Copyright(C) 2020. YOLO,HOLO. All right reserved."></TextView>
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>
 
