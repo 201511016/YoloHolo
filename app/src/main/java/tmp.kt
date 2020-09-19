@@ -1,6 +1,6 @@
+/*
 package com.photoeditorsdk.android.app
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
@@ -9,7 +9,6 @@ import android.os.Environment
 import android.provider.MediaStore
 import android.util.Log
 import android.widget.Button
-import android.widget.ImageButton
 import android.widget.Toast
 import ly.img.android.pesdk.PhotoEditorSettingsList
 import ly.img.android.pesdk.assets.filter.basic.FilterPackBasic
@@ -46,48 +45,45 @@ class KEditorDemoActivity : Activity(), PermissionRequest.Response {
     override fun permissionGranted() {}
 
     override fun permissionDenied() {
-        /* TODO: The Permission was rejected by the user. The Editor was not opened,
-         * Show a hint to the user and try again. */
+        */
+/* TODO: The Permission was rejected by the user. The Editor was not opened,
+         * Show a hint to the user and try again. *//*
+
     }
 
-    // Create a empty new SettingsList and apply the changes on this referance.
-    // If you include our asset Packs and use our UI you also need to add them to the UI,
-    // otherwise they are only available for the backend (like Serialisation)
-    // See the specific feature sections of our guides if you want to know how to add our own Assets.
     private fun createPesdkSettingsList() =
-      PhotoEditorSettingsList()
-        .configure<UiConfigFilter> {
-            it.setFilterList(FilterPackBasic.getFilterPack())
-        }
-        .configure<UiConfigText> {
-            it.setFontList(FontPackBasic.getFontPack())
-        }
-        .configure<UiConfigFrame> {
-            it.setFrameList(FramePackBasic.getFramePack())
-        }
-        .configure<UiConfigOverlay> {
-            it.setOverlayList(OverlayPackBasic.getOverlayPack())
-        }
-        .configure<UiConfigSticker> {
-            it.setStickerLists(
-                PersonalStickerAddItem(),
-                StickerPackEmoticons.getStickerCategory(),
-                StickerPackShapes.getStickerCategory()
-            )
-        }
-        .configure<SaveSettings> {
-            // Set custom editor image export settings
-            it.setExportDir(Directory.DCIM, "SomeFolderName")
-            it.setExportPrefix("result_")
-            it.savePolicy = SaveSettings.SavePolicy.RETURN_ALWAYS_ONLY_OUTPUT
-        }
+            PhotoEditorSettingsList()
+                    .configure<UiConfigFilter> {
+                        it.setFilterList(FilterPackBasic.getFilterPack())
+                    }
+                    .configure<UiConfigText> {
+                        it.setFontList(FontPackBasic.getFontPack())
+                    }
+                    .configure<UiConfigFrame> {
+                        it.setFrameList(FramePackBasic.getFramePack())
+                    }
+                    .configure<UiConfigOverlay> {
+                        it.setOverlayList(OverlayPackBasic.getOverlayPack())
+                    }
+                    .configure<UiConfigSticker> {
+                        it.setStickerLists(
+                                PersonalStickerAddItem(),
+                                StickerPackEmoticons.getStickerCategory(),
+                                StickerPackShapes.getStickerCategory()
+                        )
+                    }
+                    .configure<SaveSettings> {
+                        // Set custom editor image export settings
+                        it.setExportDir(Directory.DCIM, "SomeFolderName")
+                        it.setExportPrefix("result_")
+                        it.savePolicy = SaveSettings.SavePolicy.RETURN_ALWAYS_ONLY_OUTPUT
+                    }
 
-    @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val openGallery = findViewById<ImageButton>(R.id.edit_btn)
+        val openGallery = findViewById<Button>(R.id.openGallery)
 
         openGallery.setOnClickListener {
             openSystemGalleryToSelectAnImage()
@@ -100,9 +96,9 @@ class KEditorDemoActivity : Activity(), PermissionRequest.Response {
             startActivityForResult(intent, GALLERY_RESULT)
         } else {
             Toast.makeText(
-              this,
-              "No Gallery APP installed",
-              Toast.LENGTH_LONG
+                    this,
+                    "No Gallery APP installed",
+                    Toast.LENGTH_LONG
             ).show()
         }
     }
@@ -117,8 +113,8 @@ class KEditorDemoActivity : Activity(), PermissionRequest.Response {
         settingsList[LoadSettings::class].source = inputImage
 
         PhotoEditorBuilder(this)
-          .setSettingsList(settingsList)
-          .startActivityForResult(this, PESDK_RESULT)
+                .setSettingsList(settingsList)
+                .startActivityForResult(this, PESDK_RESULT)
     }
 
 
@@ -160,4 +156,4 @@ class KEditorDemoActivity : Activity(), PermissionRequest.Response {
         }
     }
 
-}
+}*/
