@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/relativelayout1">
+
+    <!-- 상단바 -->
+    <FrameLayout
+        android:id="@+id/banner"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:background="#ffffff">
+        <!-- 뒤로가기 -->
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="start|center_vertical"
+            android:layout_margin="10dp"
+            android:src="@drawable/back_btn_img" />
+    </FrameLayout>
+    <!-- 갤러리 불러온 사진 -->
+    <FrameLayout
+        android:id="@+id/work_space"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/banner"
+        android:background="#000000">
+        <!-- 사진 영역 -->
+        <ImageView
+            android:id="@+id/play_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+</RelativeLayout>
