@@ -16,6 +16,7 @@
     <protected-broadcast android:name="android.intent.action.MEDIA_MOUNTED" />
 
     <application
+        tools:replace="android:appComponentFactory"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -38,5 +39,38 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <receiver android:name=".Utils.NotificationReceiver"></receiver>
+        <service android:enabled="true"
+            android:name=".Utils.ForegroundService"
+            android:foregroundServiceType="mediaProjection"/>
+        <service android:enabled="true" android:name=".Utils.Controller"/>
+
+        <activity android:name=".Viewer.RecordActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/AppTransparentTheme"
+            android:parentActivityName=".SettingsSystem"></activity>
+
+        <activity android:name=".Viewer.SettingActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/ControllerTheme"
+            android:noHistory="true"/>
+
+        <activity android:name=".Viewer.ScreenShotActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/AppTransparentTheme"
+            android:noHistory="true"
+            android:parentActivityName=".SettingsSystem" />
+
+        <activity android:name=".Fragment.VideoFragment" />
+
+        <activity android:name=".Fragment.ScreenshotFragment" />
+
+        <activity android:name=".Viewer.ImageViewerActivity"
+            android:parentActivityName=".Viewer.SettingActivity"/>
+
+        <activity android:name=".Viewer.VideoViewerActivity"
+            android:parentActivityName=".Viewer.SettingActivity" />
+
     </application>
 </manifest>

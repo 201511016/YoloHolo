@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">YoloHolo</string>
+    <string name="defaultValueResolution">1</string>
+    <string name="defaultValueBitrate">0</string>
+    <string name="defaultValueFPS">30</string>
+    <string name="defaultValueOrientation">100</string>
+    <string name="defaultValueSpeed">1</string>
+    <string name="summary">%1$s</string>
+    <string name="storageVideoPath">/storage/emulated/0/RecordingScreen</string>
+    <string name="storageImagePath">/storage/emulated/0/RecordingScreen/Img</string>
+    <string name="SettingsNameTitle">설정</string>
+    <string name="VideoNameTitle">화면 녹화</string>
+    <string name="ScreenshotNameTitle">스크린샷</string>
+
 </resources>

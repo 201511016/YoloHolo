@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageButton
+        android:id="@+id/controller_bt_settings"
+        android:layout_width="?android:actionBarSize"
+        android:layout_height="?android:actionBarSize"
+        android:src="@drawable/ic_settings_black_24dp"
+        android:tint="#4762cf"
+        style="@style/ButtonController"/>
+
+    <ImageButton
+        android:id="@+id/controller_bt_record"
+        android:layout_width="?android:actionBarSize"
+        android:layout_height="?android:actionBarSize"
+        android:src="@drawable/ic_videocam_black_24dp"
+        android:tint="#ffaa6f"
+        style="@style/ButtonController"/>
+
+    <ImageButton
+        android:id="@+id/controller_bt_screenshot"
+        android:layout_width="?android:actionBarSize"
+        android:layout_height="?android:actionBarSize"
+        android:src="@drawable/ic_camera_alt_black_24dp"
+        android:tint="#488ae1"
+        style="@style/ButtonController"/>
+
+    <ImageButton
+        android:id="@+id/controller_bt_exit"
+        android:layout_width="?android:actionBarSize"
+        android:layout_height="?android:actionBarSize"
+        android:src="@drawable/ic_close_black_24dp"
+        android:tint="@color/colorBackgroundIcon"
+        style="@style/ButtonController"/>
+</LinearLayout>

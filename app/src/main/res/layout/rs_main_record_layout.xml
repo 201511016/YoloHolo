@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginBottom="5dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp">
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="YoloHolo"
+                android:textSize="20sp"
+                android:textColor="#2a2b2f"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/noti_controll_setting"
+            style="@style/ButtonNotification"
+            android:layout_width="60dp"
+            android:layout_height="59dp"
+            android:background="#ffffff"
+            android:drawableTop="@drawable/ic_settings_black_24dp"
+            android:drawableTint="#000000"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="설정"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/noti_controll_screenshot"
+            android:layout_width="60dp"
+            android:layout_height="59dp"
+            android:text="스크린샷"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:drawableTop="@drawable/ic_camera_alt_black_24dp"
+            android:drawableTint="#000000"
+            android:textColor="#000000"
+            android:background="#ffffff"
+            style="@style/ButtonNotification"/>
+        <Button
+            android:id="@+id/noti_controll_video"
+            android:layout_width="60dp"
+            android:layout_height="59dp"
+            android:text="화면녹화"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:drawableTop="@drawable/ic_videocam_black_24dp"
+            android:drawableTint="#000000"
+            android:textColor="#000000"
+            android:background="#ffffff"
+            style="@style/ButtonNotification" />
+
+        <Button
+            android:id="@+id/noti_controll_library"
+            android:layout_width="60dp"
+            android:layout_height="59dp"
+            android:text="저장공간"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:drawableTop="@drawable/ic_sd_storage_black_24dp"
+            android:drawableTint="#000000"
+            android:textColor="#000000"
+            android:background="#ffffff"
+            style="@style/ButtonNotification"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/noti_controll_exit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:drawableTop="@drawable/ic_close_black_24dp"
+            android:gravity="center_vertical"
+            android:drawableTint="#000000"
+            android:textColor="#000000"
+            android:background="#b4b4b4"
+            style="@style/ButtonNotification"/>
+    </LinearLayout>
+</LinearLayout>

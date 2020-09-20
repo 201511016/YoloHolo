@@ -49,7 +49,7 @@ android {
 
     defaultConfig {
         applicationId "com.photoeditorsdk.android.app"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -74,4 +74,34 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:28.0.0'
+
+    /*for recording*/
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'com.android.support:preference-v7:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //Permission
+    implementation 'gun0912.ted:tedpermission:2.2.2'
+
+    //Butterknife
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+
+    //Google Material
+    implementation 'com.google.android.material:material:1.1.0'
+
+    //Kotlin
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //Swiperefreshlayout
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+}
+
+/*for recording*/
+repositories {
+    mavenCentral()
 }

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <EditTextPreference
+        android:layout="@layout/rs_text_view_video_configure_layout"/>
+
+    <ListPreference
+        android:defaultValue="@string/defaultValueResolution"
+        android:entries="@array/resolutions"
+        android:entryValues="@array/resolution_values"
+        android:icon="@drawable/ic_blur_circular_black_24dp"
+        android:key="Resolution"
+        android:summary="@string/summary"
+        android:title="비디오 해상도" />
+
+    <ListPreference
+        android:key="Fps"
+        android:defaultValue="@string/defaultValueFPS"
+        android:entries="@array/frame_rates"
+        android:entryValues="@array/frame_rate_values"
+        android:title="비디오 FPS"
+        android:summary="@string/summary"
+        android:icon="@drawable/ic_filter_frames_black_24dp"/>
+
+    <ListPreference
+        android:key="BitRate"
+        android:defaultValue="@string/defaultValueBitrate"
+        android:entries="@array/bit_rates"
+        android:entryValues="@array/bit_rate_values"
+        android:title="화질"
+        android:summary="@string/summary"
+        android:icon="@drawable/ic_airplay_black_24dp"/>
+
+    <ListPreference
+        android:key="Orientation"
+        android:defaultValue="@string/defaultValueOrientation"
+        android:entries="@array/orientations"
+        android:entryValues="@array/orientation_values"
+        android:title="방향"
+        android:summary="@string/summary"
+        android:icon="@drawable/ic_screen_rotation_black_24dp"/>
+
+
+    <EditTextPreference
+        android:layout="@layout/rs_text_view_display_option_layout"/>
+
+    <SwitchPreferenceCompat
+        android:defaultValue="true"
+        android:key="DisplayTimer"
+        android:title="타이머 사용"
+        android:icon="@drawable/ic_timer_black_24dp"/>
+
+    <EditTextPreference
+        android:layout="@layout/rs_text_view_storage_layout"/>
+
+    <EditTextPreference
+        android:key="edit_storage"
+        android:defaultValue="@string/storageVideoPath"
+        android:title="Storage"
+        android:summary="@string/storageVideoPath"/>
+</PreferenceScreen>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsSystem">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="잠시만 기다려주세요 화면이 꺼진 후 컨트롤러가 나타납니다."
+        android:textColor="#ff0000"
+        android:textSize="14dp"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

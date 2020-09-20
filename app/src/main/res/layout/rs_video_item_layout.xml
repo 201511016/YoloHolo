@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_preview"
+            android:layout_width="100dp"
+            android:layout_height="77dp"
+            android:contentDescription="프리뷰"
+            android:scaleType="centerCrop"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toRightOf="@+id/image_preview"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_video_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00.mp4" />
+
+
+            <TextView
+                android:id="@+id/text_video_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="05:47" />
+
+            <TextView
+                android:id="@+id/text_video_size"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="74Mb" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/bt_delete_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete_black_24dp"
+            android:background="@color/colorBackground"
+            android:tint="@color/colorBackgroundIcon"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <CheckBox
+        android:id="@+id/cb_select_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:background="@drawable/check_box_background"
+        android:layout_alignStart="@+id/constraint_layout"
+        android:layout_alignTop="@+id/constraint_layout"
+        android:layout_alignEnd="@+id/constraint_layout"
+        android:layout_alignBottom="@+id/constraint_layout"/>
+</RelativeLayout>
