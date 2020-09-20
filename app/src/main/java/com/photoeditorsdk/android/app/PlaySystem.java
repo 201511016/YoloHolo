@@ -49,7 +49,7 @@ public class PlaySystem extends Activity {
         checkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent z = new Intent(PlaySystem.this, HoloSystem.class);
+                Intent z = new Intent(PlaySystem.this, HoloSystem_play.class);
                 startActivity(z);
             }
         });

@@ -28,6 +28,7 @@
         <activity android:name=".CallGallery"/>
         <activity android:name=".EditSystem"/>
         <activity android:name=".HoloSystem"/>
+        <activity android:name=".HoloSystem_play"/>
         <activity android:name=".PlaySystem"/>
         <activity android:name=".SettingsSystem"/>
         <activity android:name=".MainActivity"
